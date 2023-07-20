@@ -29,10 +29,11 @@ func (t *trie) Appearance(input string) {
 
 	current := t.root
 	for _, letter := range input {
-		if letter == ':' {
-			continue
-		}
 		index := letter - 'a'
+		if letter == ':' {
+			index = 26
+		}
+
 		if current.children[index] == nil {
 			fmt.Println("prefix percentage : 0 - No match found")
 		}

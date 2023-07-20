@@ -16,11 +16,12 @@ func (t *trie) Ingest(input string) {
 	//insert string into trie
 	current := t.root
 	for _, letter := range input {
+		index := letter - 'a'
 		if letter == ':' {
 			current.eow_count++
-			continue
+			index = 26
 		}
-		index := letter - 'a'
+
 		if current.children[index] == nil {
 			current.children[index] = &trieNode{eow_count: 0}
 		}
