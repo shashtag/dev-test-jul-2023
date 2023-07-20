@@ -36,6 +36,7 @@ func (t *trie) Appearance(input string) {
 
 		if current.children[index] == nil {
 			fmt.Println("prefix percentage : 0 - No match found")
+			return
 		}
 		current = current.children[index]
 	}
