@@ -18,6 +18,8 @@ The given function needs to be converted from recursive to a non recursive (iter
 
 ### Base case
 
+> Time Complexity - O ( 1 ), Space Complexity - O ( 1 )
+
 - If cur is not provided set cur to 0
   - Time Complexity - O ( 1 )
   - Space Complexity - O ( 1 )
@@ -26,6 +28,8 @@ The given function needs to be converted from recursive to a non recursive (iter
   - Space Complexity - O ( 1 )
 
 ### Recursive case
+
+> Time Complexity - O ( n ), Space Complexity - O ( 1 )
 
 - For loop from n to 3
   - Time Complexity - O ( n )
