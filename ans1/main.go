@@ -3,6 +3,8 @@ package main
 import "github.com/shashtag/dev-test-jul-2023.git/ans1/prefixpercentage"
 
 func main() {
+
+	// driver code for iterative version  - change as you like to test out the code.
 	trie := prefixpercentage.NewTrie()
 
 	trie.Ingest("leoluca:uk:dev")

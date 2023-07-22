@@ -27,6 +27,7 @@ func (t *trie) Appearance(input string) {
 		}
 	}
 
+	// check if the prefix is in the trie and print the appearance percentage
 	current := t.root
 	for _, letter := range input {
 		index := letter - 'a'
