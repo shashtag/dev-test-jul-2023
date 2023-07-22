@@ -10,7 +10,7 @@ func (t *trie) Ingest(input string) {
 	// record all words in dict
 	words := strings.Split(input, ":")
 	for _, word := range words {
-		dict[word] = true
+		t.dict[word] = true
 	}
 
 	//insert string into trie

@@ -21,7 +21,7 @@ func (t *trie) Appearance(input string) {
 	words := strings.Split(input, ":")
 	for _, word := range words {
 
-		if _, ok := dict[word]; !ok {
+		if _, ok := t.dict[word]; !ok {
 			fmt.Printf("prefix percentage : 0 - Word '%s' not found part of the words in the ingests ", word)
 			return
 		}

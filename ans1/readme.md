@@ -63,7 +63,7 @@ w - number of words
 
 > Time complexity - O ( w + n ), Space complexity - O ( w + n )
 
-- increses ingests by 1
+- Increses ingests by 1
   - Time complexity - O ( 1 )
 - Records all the words in the map
   - Time complexity - O ( w )
