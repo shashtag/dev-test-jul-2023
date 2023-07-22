@@ -15,6 +15,7 @@ type trie struct {
 	dict map[string]bool
 }
 
+// Time -O ( 1 ), Space - O ( 1 )
 func NewTrie() *trie {
 	return &trie{root: &trieNode{eow_count: 0}, ingests: 0, dict: make(map[string]bool)}
 }

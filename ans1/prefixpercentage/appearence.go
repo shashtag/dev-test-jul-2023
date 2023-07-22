@@ -7,7 +7,8 @@ import (
 
 func (t *trie) Appearance(input string) {
 
-	//edge case - empty input string
+	// edge case - empty input string
+	// Time - O ( 1 )
 	if input == "" {
 		if t.ingests == 0 {
 			fmt.Println("prefix percentage : 0 - No ingests")
@@ -18,6 +19,7 @@ func (t *trie) Appearance(input string) {
 	}
 
 	// check if all words are in the map
+	// Time - O ( w ) where w is the number of words in the input string
 	words := strings.Split(input, ":")
 	for _, word := range words {
 
@@ -28,6 +30,7 @@ func (t *trie) Appearance(input string) {
 	}
 
 	// check if the prefix is in the trie and print the appearance percentage
+	// Time - O ( n ) where n is the length of the input string
 	current := t.root
 	for _, letter := range input {
 		index := letter - 'a'
