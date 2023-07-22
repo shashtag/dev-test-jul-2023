@@ -18,6 +18,7 @@ func (c *Cache) Put(key, value, weight int64) {
 		return
 	}
 
+	// if cache is full, pop the least score item
 	if len(c.items) == c.capacity {
 
 		for i := 0; i < len(heapDataList); i++ {
@@ -33,6 +34,7 @@ func (c *Cache) Put(key, value, weight int64) {
 
 	}
 
+	// add the new item into heap list and cache map
 	heapDataList = append(heapDataList, heapData{key: key})
 	c.items[key] = cacheData{weight: weight, value: value, last_modified: current_time}
 
