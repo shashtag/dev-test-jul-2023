@@ -12,6 +12,7 @@ func (c *Cache) Put(key, value, weight int64) {
 	current_time := time.Now().UnixNano()
 
 	// if key exists, update the value and weight
+	// Time - O ( 1 ), Space - O ( 1 )
 	if _, ok := c.items[key]; ok {
 		c.items[key] = cacheData{weight: weight, value: value, last_modified: current_time}
 		fmt.Printf("Item %d updated \n", key)
@@ -19,6 +20,7 @@ func (c *Cache) Put(key, value, weight int64) {
 	}
 
 	// if cache is full, pop the least score item
+	// Time - O ( n )
 	if len(c.items) == c.capacity {
 
 		for i := 0; i < len(heapDataList); i++ {
@@ -35,6 +37,7 @@ func (c *Cache) Put(key, value, weight int64) {
 	}
 
 	// add the new item into heap list and cache map
+	// Time - O ( 1 ), Space O ( 1 )
 	heapDataList = append(heapDataList, heapData{key: key})
 	c.items[key] = cacheData{weight: weight, value: value, last_modified: current_time}
 
