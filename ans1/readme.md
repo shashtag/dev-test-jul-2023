@@ -56,9 +56,8 @@ w - number of words
 
 ### Data Structures
 
-- trie (trie) - enters all the stings and stores them in form of a tree.
+- structure{trie root node and ingests} (trie) - enters all the stings and stores them in form of a tree. Keeps the count of number of ingests
 - map (dict) - stores the occurrence of a word.
-- integer (ingests) - stores the total number of ingests
 
 ### Input func
 

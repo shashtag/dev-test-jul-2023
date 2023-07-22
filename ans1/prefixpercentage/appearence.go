@@ -9,7 +9,7 @@ func (t *trie) Appearance(input string) {
 
 	//edge case - empty input string
 	if input == "" {
-		if ingests == 0 {
+		if t.ingests == 0 {
 			fmt.Println("prefix percentage : 0 - No ingests")
 			return
 		}
@@ -42,8 +42,8 @@ func (t *trie) Appearance(input string) {
 		current = current.children[index]
 	}
 	if current.eow_count > 0 {
-		s := fmt.Sprintf("%.2f", float64(current.eow_count)/float64(ingests))
-		fmt.Printf("prefix percentage : %s - prefix count = %d, ingests = %d\n", s, current.eow_count, ingests)
+		s := fmt.Sprintf("%.2f", float64(current.eow_count)/float64(t.ingests))
+		fmt.Printf("prefix percentage : %s - prefix count = %d, ingests = %d\n", s, current.eow_count, t.ingests)
 		return
 	}
 	fmt.Println("prefix percentage : 0 - No match found")

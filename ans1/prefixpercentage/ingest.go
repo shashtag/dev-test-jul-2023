@@ -5,7 +5,7 @@ import (
 )
 
 func (t *trie) Ingest(input string) {
-	ingests++
+	t.ingests++
 
 	// record all words in dict
 	words := strings.Split(input, ":")
