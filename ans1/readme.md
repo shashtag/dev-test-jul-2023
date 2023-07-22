@@ -47,7 +47,7 @@ appearance('leo')
 - Will it be 0.8 (as leo is the prefix of of 4 out of 5 strings)
 - Will it be 0 (as leo is not a complete word which ends with a delimiter)
 
-I have written the answer with the understanding that it should be 0 or else there will not be any use of the delimiter
+> I have written the answer with the understanding that it should be 0 or else there will not be any use of the delimiter
 
 ## Approach and complexity analysis
 
@@ -56,8 +56,7 @@ w - number of words
 
 ### Data Structures
 
-- structure{trie root node and ingests} (trie) - enters all the stings and stores them in form of a tree. Keeps the count of number of ingests
-- map (dict) - stores the occurrence of a word.
+- Structure{trie root node and ingests and dict} (trie) - enters all the stings and stores them in form of a tree. Keeps the count of number of ingests. Stores the occurrence of a word.
 
 ### Input func
 
