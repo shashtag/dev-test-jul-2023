@@ -1,11 +1,15 @@
 package cache
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func (c *Cache) Get(key int64) {
 	fmt.Println()
-	if _, ok := c.items[key]; ok {
-		fmt.Printf("Value for key %d : %d \n", key, c.items[key].value)
+	if data, ok := c.items[key]; ok {
+		fmt.Printf("Value for key %d : %d \n", key, data.value)
+		c.items[key] = cacheData{weight: data.weight, value: data.value, last_modified: time.Now().UnixNano()}
 		return
 	}
 	fmt.Printf("Value not found for key  %d : -1 \n", key)
